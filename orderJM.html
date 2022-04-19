@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src = "JMOrderScript1.js"></script> <!--Javascript-->
+        <!--<script src = "JMOrderScript2.js"></script> JQuery Script-->
+        <script src = "jquery-3.6.0.js"></script> <!--Jquery File Reference-->
+        <link rel="stylesheet" href="JM.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <div class = "headNav" id = "navBarMain">
+        <img src = "logo.png" height="150" width="200">
+        <div class="topnav" id="myTopnav">
+            <a href="JerseyMikesIndex.html" class="active">HOME</a>
+            <div class="subnav">
+                <button class="subnavbtn">ABOUT US<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="About.html#subAboveSec">A SUB ABOVE</a>
+                    <a href="About.html#monthGivingSec">MONTH OF GIVING</a>
+                    <a href="About.html#companyHistorySec">COMPANY HISTORY</a>
+                    <a href="About.html#JMNewsSec">JM NEWS</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">ORDER NOW!<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="orderJM.html">MENU</a>
+                    <a href="stores.html">STORES</a>
+                    <a href="orderJM.html">PLACE ORDER</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">CONTACT<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="Contact.html#joinTeamSection">JOIN OUR TEAM</a>
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="Contact.html">CONTACT US</a>
+                </div>
+            </div>
+            <!--<a href="orderJM.html">Order Now</a>
+            <a href="About.html">About Us</a>
+            <a href="Contact.html">Contact</a>-->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class = "mainBody">
+        <h1>A SUB ABOVE!</h1>
+        <h2>Choose A Sub From The Menu!</h2>
+        <h3>Place A Sub Order To Pick Up!</h3>
+    <div id = "coldSubMenu">
+        <ul>
+            <h3>Cold Subs Menu</h3>
+            <p>All Cold Subs EXCEPT The #9 And #10 Are Made With Provelone!</p>
+            <li>(#1) BLT - $6</li>
+            <li>(#2) JS Favorite - $8</li>
+            <li>(#3) Ham + Prove - $8</li>
+            <li>(#4) Number 4 - $8</li>
+            <li>(#5) Super Sub - $9</li>
+            <li>(#6) RB + Prove - $8</li>
+            <li>(#7) Turk + Prove - $8</li>
+            <li>(#8) Club Sub - $9</li>
+            <li>(#9) Club Supreme - $10</li>
+            <li>(#10) Tuna - $8</li>
+            <li>(#11) Stickball Special - $9</li>
+            <li>(#12) Cancro Special - $9</li>
+            <li>(#13) Italian - $10</li>
+            <li>(#14) Veggie - $6</li>
+
+        </ul>
+    </div>
+    <div id = "hotSubMenu">
+        <ul>
+            <h3>Hot Subs Menu</h3>
+            <p>All Hot Subs EXCEPT The PORTABELLA Are Made With White American!</p>
+            <li>(#16) CHX Philly - $10</li>
+            <li>(#17) BEEF Philly - $10</li>
+            <li>(#26) CHX Bacon Ranch - $10</li>
+            <li>(#31) California - $10</li>
+            <li>(#42) CHX Chipotle - $10</li>
+            <li>(#43) BEEF Chipotle - $10</li>
+            <li>(#44) CHX Buffalo - $11</li>
+            <li>(#55) CHX Kahuna - $12</li>
+            <li>(#56) BEEF Kahuna - $12</li>
+            <li>Veggie Portabella - $12</li>
+            <li></li>
+        </ul>
+    </div>
+        <img id = "subHeroImage" src = "logo.png" height="150" width="200">
+        <p><input type = "text" id = "userSubSelection" size = "20" placeholder=" Selected Sub Here"></p> <!--Selected Pizza Size-->
+        <select name="userSubChoice" id="userSubChoice"> <!--Sub Choices-->
+            <option value="null" disabled selected>Select Your Sub</option>
+            <option value="null"></option>
+            <option value="null">---COLD SUBS---</option>
+            <option value="1">(#1) BLT</option>
+            <option value="2">(#2) Jersey Shore Favorite</option>
+            <option value="3">(#3) Ham + Provelone</option>
+            <option value="4">(#4) Number 4</option>
+            <option value="5">(#5) Super Sub</option>
+            <option value="6">(#6) Roast Beef + Provelone</option>
+            <option value="7">(#7) Turkey + Provelone</option>
+            <option value="8">(#8) Club Sub</option>
+            <option value="9">(#9) Club Supreme</option>
+            <option value="10">(#10) Tuna</option>
+            <option value="11">(#11) Stickball Special</option>
+            <option value="12">(#12) Cancro Special</option>
+            <option value="13">(#13) Italian</option>
+            <option value="14">(#14) Veggie</option>
+            <option value="null"></option>
+            <option value="null">---HOT SUBS---</option>
+            <option value="16">(#16) CHX Philly</option>
+            <option value="17">(#17) BEEF Philly</option>
+            <option value="26">(#26) CHX BACON RANCH</option>
+            <option value="31">(#31) CHX CALI</option>
+            <option value="42">(#42) CHX Chipotle</option>
+            <option value="43">(#43) BEEF Chipotle</option>
+            <option value="44">(#44) CHX Buffalo</option>
+            <option value="55">(#55) CHX Kahuna</option>
+            <option value="56">(#56) BEEF Kahuna</option>
+            <option value="PORT">(PORT) Portabella + Swiss</option>
+        </select><br>
+        <h3>Click To Check The Contents Of Your Sub</h3><br>
+        <button type = "button" id = "contentCheckButton" onClick = "checkContents()">Check Sub Contents</button> <!--Confirm Sub Choice-->
+        <div class = "subBreadInput">
+            <h2>Please Choose A Type Of Bread</h2> <!--sub size choice (radio buttons)-->
+            <input type="radio" id="White" name="breadChoice" value="White" checked>
+            <label for="Mini">White</label>
+            <input type="radio" id="Wheat" name="breadChoice" value="Wheat">
+            <label for="Regular">Wheat</label>
+            <input type="radio" id="roseParm" name="breadChoice" value="roseParm">
+            <label for="Giant">Rosemary Parmesean</label>
+            <input type="radio" id="gFree" name="breadChoice" value="gFree">
+            <label for="Regular">Gluten Free</label><br>
+        </div>
+        <div class = "subSizeInput">
+            <h2>Please Choose A Size</h2> <!--sub size choice (radio buttons)-->
+            <h3>(We Do Not Offer Cheesesteaks in Mini Size, If Chosen, Please Select Only Regular OR Giant)</h3>
+            <input type="radio" id="Mini" name="subSize" value="Mini" checked>
+            <label for="Mini">Mini</label>
+            <input type="radio" id="Regular" name="subSize" value="Regular">
+            <label for="Regular">Regular</label>
+            <input type="radio" id="Giant" name="subSize" value="Giant">
+            <label for="Giant">Giant</label><br>
+        </div>
+        <p>Confirm Sub Base Before Moving To Next Section</p>
+        <button type = "button" id = "subSubmitButton" onClick = "subChoiceConfirm()">Confirm Sub Base</button> <!--Confirm Sub Choice--><br><hr><br>
+        <div class = "addToppingsSection">
+            <h1>Add Additional Toppings</h1>
+            <div class = "toppingsForm">
+                <p>We Recommend All Our Cold Subs Mikes Way!</p>
+                <p id = "mikesWayContents">Mikes Way Contains: Raw Onions, Lettuce, Tomato, Oil & Vinegar, Oregano & Salt!</p>
+                <p id = "mikesWaySpecial">If You Would Like To Add Or Subtract Special Items, Specify In The Instructions!</p>
+                <label for="checkbox7">Mikes Way! (FREE)</label>
+                <input type="checkbox" id="checkbox7" name="checkbox7"  value = "Mikes Way"><br>
+                <h3>Add toppings to your sub! (Extra Rates May Apply)</h3>  <!--Toppings checkboxes (choices)-->
+                <label for="checkbox0">Extra Cheese (+.5)</label>
+                <input type="checkbox" id="checkbox0" name="checkbox0" value = "Extra Cheese"><br>
+                <label for="checkbox1">Extra Meat (+1.50)</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1" value = "Extra Meat"><br>
+                <label for="checkbox2">Double Meat (+5)</label>
+                <input type="checkbox" id="checkbox2" name="checkbox2" value = "Double Meat"><br>
+                <label for="checkbox3">Lettuce (FREE)</label>
+                <input type="checkbox" id="checkbox3" name="checkbox3" value = "Lettuce"><br>
+                <label for="checkbox4">Grilled Portabellas (+2)</label>
+                <input type="checkbox" id="checkbox4" name="checkbox4" value = "Portabellas"><br>
+                <label for="checkbox5">Bacon (+1)</label>
+                <input type="checkbox" id="checkbox5" name="checkbox5"  value = "Bacon"><br>
+                <label for="checkbox6">Tomatos (FREE)</label>
+                <input type="checkbox" id="checkbox6" name="checkbox6"  value = "Tomato"><br>
+                <!--<p>We Also Recommend All Our Cold Subs Mikes Way!</p>
+                <p id = "mikesWayContents">Mikes Way Contains: Raw Onions, Lettuce, Tomato, Oil & Vinegar, Oregano & Salt!</p>
+                <label for="checkbox7">Mikes Way! (FREE)</label>
+                <input type="checkbox" id="checkbox7" name="checkbox7"  value = "mikesWay"><br>-->
+                <h3>Special Instructions? Enter Them Below!</h3>
+                <textarea type="text" id="specialInstructionsInput" name="specialInstructionsInput" style="width: 200px;height: 100px;color: #134A7C;"></textarea><br>
+                <button type = "button" class = "button1" onClick = "toppingsConfirm()">Confirm Extra Toppings</button>
+                <br><br>
+                <!--<button type = "button" class = "button1" onClick = "finalSubCheck()">Check Sub</button>-->
+                <button type = "button" id = "addOnsButton"  onClick = "addAdditionalItems()" class = "button3">ADD EXTRA NIBBLES</button>
+                <br><br>
+                <div class = "extraAdditionsSection" id = "extraAdditionsSection">
+                    <h2>ADD CHIPS, Drinks, And A Cookie To Your Order For $4!</h2>
+                    <select name = "addChips" id = "addChips">
+                        <option value="null" disabled selected>SELECT CHIPS</option>
+                        <option value="SV">SV CHIPS</option>
+                        <option value="SCO">SCO CHIPS</option>
+                        <option value="DORITO">DORITO CHIPS</option>
+                        <option value="LAYS">LAYS CHIPS</option>
+                        <option value="null">NONE</option>
+                    </select>
+                    <select name = "addDrinks" id = "addDrinks">
+                        <option value="null" disabled selected>SELECT DRINKS</option>
+                        <option value="LSD">32 oz Drink</option>
+                        <option value="GAT">Gatorade</option>
+                        <option value="BW">Bottled Water</option>
+                        <option value="null">NONE</option>
+                    </select>
+                    <select name = "addCookie" id = "addCookie">
+                        <option value="null" disabled selected>SELECT DESSERTS</option>
+                        <option value="SCC">Small Choc Chip Cookie</option>
+                        <option value="SSC">Small Sugar Cookie</option>
+                        <option value="LCC">Large Choc Chip Cookie</option>
+                        <option value="BROWNIE">Brownie</option>
+                        <option value="null">NONE</option> 
+                    </select><br><br>
+                    <button type = "button" class = "button2" onClick = "confirmAdditions()" id = "confirmAddOns">Confirm Nibbles!</button>
+                </div>
+                <p>Be Sure To Check Your Order Before Check Out To Ensure The Price Is Correct!</p>
+                <button type = "button" class = "button1" id = "checkFinalButton" onClick = "finalSubCheck()">Check Final Sub Order!</button>
+                <br><br>
+                <button type = "button" class = "button3" id = "checkOutButton" onClick = "orderCheckOut()">Checkout</button>
+                <br><br>
+                <script>
+                    /*
+                $(document).ready(function(){
+                    $("#addOnsButton").click(function(){
+                      let x = prompt("Would You Like To Add Any Additional \nChips Drinks Or Cookies For $4? \nEnter Y for Yes, N For No");
+                      if (x.toUpperCase() === "Y") {
+                        $("#extraAdditionsSection").show();
+                      }
+                      else if (x.toUpperCase() === "N") {
+                        $("#extraAdditionsSection").hide();
+                      }
+                      while (x.toUpperCase() !== "Y" && x.toUpperCase() !== "N") {
+                        alert("OOPS! TRY AGAIN!")
+                        break;
+                      }
+                    });
+                });
+                $(document).ready(function(){
+                    $("#confirmAddOns").click(function(){
+                        let chipList = document.getElementById("addChips");
+                        let drinkList = document.getElementById("addDrinks");
+                        let dessertList = document.getElementById("addCookie");
+                        let userChips = chipList.options[chipList.selectedIndex].text;
+                        let userDrink = drinkList.options[drinkList.selectedIndex].text;
+                        let userDessert = dessertList.options[dessertList.selectedIndex].text;
+                        alert("You Chose: " + userChips + ", " + "A " + userDrink + ", And A " + userDessert);
+                    });
+                }); 
+                */
+                </script>
+                <div class = "footer">
+                    <div class = "orderButtons">
+                        <a id = "backToTop" href="orderJM.html">Back To Top</a>
+                    </div>
+                    <div class = "footerText1">
+                        <p>Jersey Mikes LLC ©</p>
+                    </div>
+                    <div class = "footerText2">
+                        <p>Page Made By Andrew Ladrido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    </body>
+</html>
